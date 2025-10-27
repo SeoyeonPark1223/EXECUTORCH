@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "executorch-benchmark"
+version = "0.0.1"
+description = "ExecuTorch benchmark CLI"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "torchvision",
+    "executorch",
+    "pytest",
+    "numpy",
+]
+
+[project.scripts]
+run_bench = "benchmark.run_benchmark:main"
+
+[tool.setuptools.packages.find]
+include = ["benchmark*"]
+exclude = ["tests*", "model*", "executorch*"]
