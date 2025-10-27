@@ -7,6 +7,16 @@
 ---
 
 ## Quick Start
+### 0. Recommended Env
+```bash
+# craete venv with Python 3.10
+conda create -n python310 python=3.10
+
+# activate venv
+conda activate python310
+# verify python version 
+python --version
+```
 
 ### 1. Git Clone
 ```bash
