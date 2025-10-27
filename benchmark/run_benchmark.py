@@ -55,7 +55,7 @@ def main():
     입력 예시: run_bench --model resnet18.pte --repeat 5
     """
     parser = argparse.ArgumentParser(description="ExecuTorch Model Benchmark CLI")
-    parser.add_argument("--model", type=str, required=True, help="Path to .pte model file")
+    parser.add_argument("--model", type=str, required=True, help=".pte model name (Ex. resnet18.pte)")
     parser.add_argument("--repeat", type=int, default=5, help="Number of repetitions")
 
     args = parser.parse_args()
