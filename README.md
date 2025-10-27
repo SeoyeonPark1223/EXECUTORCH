@@ -44,7 +44,7 @@ pytest -s tests/
 run_bench --help
 run_bench --model {model_name} --repeat {repeat_num}
 ```
-
+---
 ## Test Examples
 #### Pytest 1:
 ```bash
