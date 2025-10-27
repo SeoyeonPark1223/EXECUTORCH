@@ -1,11 +1,12 @@
 import torch
 import time
+import os
 import numpy as np
 from torchvision.models import resnet18, ResNet18_Weights
 from executorch.runtime import Runtime
 from model.export_resnet18 import export_resnet18
 
-def test_resnet18_equivalence():
+def test_resnet18_equivalence(tmp_path):
     """
     Pytorch (ResNet18) 모델과 ExecuTorch 모델 (resnet18.pte) 결과 비교
     - 평균 절대 오차 (mean absolute difference)
@@ -33,6 +34,10 @@ def test_resnet18_equivalence():
 
     # 2-1. Load ExecuTorch
     execu_path = export_resnet18()
+
+    if not os.path.exists(execu_path):
+        raise FileNotFoundError(f"Model not found: {execu_path}")
+
     runtime = Runtime.get()
     method = runtime.load_program(execu_path).load_method("forward")
 

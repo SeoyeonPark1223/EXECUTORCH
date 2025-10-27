@@ -1,8 +1,23 @@
-### DS Store ### 
+### Env / OS ###
+.env/
+.venv/
+*.log
 .DS_Store
 
 ### VS Code ###
 .vscode/
 
-### Python ###
+### Build ###
+build/
+dist/
+*.egg-info/
+*.pyc
+*.pyo
 __pycache__/
+
+### Executorch ###
+executorch-torch/
+executorch/
+
+### PyTest cache ###
+.pytest_cache/
