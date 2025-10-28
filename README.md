@@ -1,4 +1,4 @@
-# Executorch
+# ExecuTorch
 
 ## Docs
 0. [Main Page](https://important-chauffeur-cbe.notion.site/ExecuTorch-2996d26f836b80129f5bebac0a7fa2f0)
