@@ -6,6 +6,23 @@
 3. [실행 로깅 유틸리티](https://important-chauffeur-cbe.notion.site/2996d26f836b805bace7cc2bc7f058ad)
 ---
 
+## Project Structure
+```shell
+├── README.md
+├── benchmark
+│   └── run_benchmark.py # logging benchmark
+├── model
+│   ├── export_resnet18.py # model export
+│   └── model_outputs # executorch model dir
+│       └── resnet18.pte
+├── pyproject.toml # setting for run_bench cli
+├── requirements.txt
+└── tests # pytests
+    ├── test_benchmark_logs.py # test run_benchmark
+    └── test_resnet18_equivalence.py # compare pytorch & executorch model
+```
+---
+
 ## Quick Start
 ### 0. Recommended Env
 ```bash
